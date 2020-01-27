@@ -12,9 +12,12 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   // Search pokemons
-  getAllPoke(keyword): Observable<Pokemon[]> {
-    return this.http
-    .get<Pokemon[]>(this.url + 's=${keyword}')
+  getAllPoke(): Observable<Pokemon[]> {
+    for (let keyword = 1; keyword <= 151; keyword++) {
+      return this.http
+    .get<Pokemon[]>(this.url + 'pokemon/${keyword}')
     .pipe(map(res => res['Search']));
+    }
   }
+  // addFaviePokemon():
 }
