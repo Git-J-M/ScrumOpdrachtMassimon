@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Pokemon} from '../models/pokemon.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -19,5 +19,8 @@ export class PokemonService {
     .pipe(map(res => res['Search']));
     }
   }
-  // addFaviePokemon():
+  addFaviePokemon(newPoke: Pokemon): Observable<Pokemon> {
+    const headers = new HttpHeaders().set("Content-Type", "application/json");
+    return this.http.post(this.url, newPoke, { headers : headers});
+  }
 }
