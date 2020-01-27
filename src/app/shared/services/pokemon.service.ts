@@ -7,6 +7,14 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class PokemonService {
-  url: string = 'https://pokeapi.co/api/v2/'
-  constructor() { }
+  url: string = 'https://pokeapi.co/api/v2/';
+
+  constructor(private http: HttpClient) { }
+
+  // Search pokemons
+  getAllPoke(keyword): Observable<Pokemon[]> {
+    return this.http
+    .get<Pokemon[]>(this.url + 's=${keyword}')
+    .pipe(map(res => res['Search']));
+  }
 }

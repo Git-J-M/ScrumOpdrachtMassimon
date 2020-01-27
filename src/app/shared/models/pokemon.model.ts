@@ -1,5 +1,6 @@
 // Pokemon.model.ts
 export interface Pokemon {
-  id: number;
+  Id: number;
   Name: string;
+  Sprites: string;
 }
