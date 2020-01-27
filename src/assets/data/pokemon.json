@@ -2,7 +2,9 @@
   "pokemon": [
     {
       "id": 1,
-      "name": "Bulbasaur"
+      "name": "Bulbasaur",
+      "type1": "poison",
+      "type2": "grass"
     }
   ]
 }
