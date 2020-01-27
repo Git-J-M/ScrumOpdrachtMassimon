@@ -20,6 +20,14 @@ export class PokemonService {
     .pipe(map(res => res['Search']));
     }
   }
+<<<<<<< Updated upstream:old_src/app/shared/services/pokemon.service.ts
+=======
+  addFaviePokemon(newPoke: Pokemon): Observable<Pokemon> {
+    const headers = new HttpHeaders().set("Content-Type", "application/json");
+    return this.http.post(this.url, newPoke, { headers : headers});
+  }
+
+>>>>>>> Stashed changes:src/app/shared/services/pokemon.service.ts
   // addFaviePokemon():
 
   addFaviePoke(newPoke: Pokemon): Observable<Pokemon> {
@@ -27,7 +35,13 @@ export class PokemonService {
     return this.http.post(this.url, newPoke, {headers: headers});
   }
 
+<<<<<<< Updated upstream:old_src/app/shared/services/pokemon.service.ts
   // getFaviePoke(newPoke: string): Observable<Pokemon> {
   //   return this.HTMLOutputElement.get<Pokemon>(`${this.}`)
   // }}
+=======
+  getFaviePoke(newPoke: string): Observable<Pokemon> {
+    return this.HTMLOutputElement.get<Pokemon>(`${this.}`)
+  }
+>>>>>>> Stashed changes:src/app/shared/services/pokemon.service.ts
 }

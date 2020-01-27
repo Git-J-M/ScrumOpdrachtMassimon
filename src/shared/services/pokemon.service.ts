@@ -31,4 +31,11 @@ export class PokemonService {
     const headers = new HttpHeaders().set("Content-type", "application/json");
     return this.http.post(this.urllocal, value, { headers: headers });
   }
+
+
+  deleteFavieJSON(value): Observable<any> {
+    const headers = new HttpHeaders().set("Content-type", "application/json");
+    return this.http.delete(value, { headers: headers });
+    //url verwijdert. Mogelijk moest een andere waarde niet mee worden gegeven
+  }
 }

@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   addFavie(value) {
     console.log(value.url);
     this.pokemonDetail$ = this.pokemonService.addFavie(value.url);
-    this.pokemonDetail$.subscribe(res => { console.log(res) });
+    this.pokemonDetail$.subscribe(res => { console.log(res); });
     this.addFavieDetail(this.pokemonDetail$);
   }
 
