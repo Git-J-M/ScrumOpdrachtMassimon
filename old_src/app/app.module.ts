@@ -1,36 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { PokemonService } from '../shared/services/pokemon.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// Page Modules
 import { HomeComponent } from './home/home.component';
-import { FavieComponent } from './favie/favie.component';
+import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { Routes, RouterModule } from '@angular/router';
+// API Module,
 import { HttpClientModule } from '@angular/common/http';
-
+// Routing onzin
+import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'favie', component: FavieComponent},
-  { path: 'contact', component: ContactComponent}
-  ];
- 
-
+  { path: 'home', component: HomeComponent},
+  { path: 'about', component: AboutComponent},
+  { path: 'contact', component: ContactComponent},
+];
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FavieComponent,
+    AboutComponent,
     ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    RouterModule.forRoot(routes) 
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [PokemonService],
+  providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

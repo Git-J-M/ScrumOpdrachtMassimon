@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary" routerLink="home">
+        home
+      </button>
+    </div>
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary" routerLink="about">
+        about
+      </button>
+    </div>
+    <div class="col-sm-2">
+      <button type="button" class="btn btn-primary" routerLink="contact">
+        contact
+      </button>
+    </div>
+    <!-- <a routerLink="home">home </a>
+    <a routerLink="about">Favie </a>
+    <a routerLink="contact">contact </a> -->
+  </div>
+  <router-outlet></router-outlet>
+  <hr>
+  <div class="text-center">Copyright Soviet Union &copy; 2020</div>
+</div>

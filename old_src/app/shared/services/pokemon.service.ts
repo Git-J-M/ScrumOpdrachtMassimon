@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class PokemonService {
   url: string = 'https://pokeapi.co/api/v2/';
+  urllocal: string = 'localhost:3000';
 
   constructor(private http: HttpClient) { }
 
@@ -19,13 +20,6 @@ export class PokemonService {
     .pipe(map(res => res['Search']));
     }
   }
-<<<<<<< Updated upstream
-  addFaviePokemon(newPoke: Pokemon): Observable<Pokemon> {
-    const headers = new HttpHeaders().set("Content-Type", "application/json");
-    return this.http.post(this.url, newPoke, { headers : headers});
-  }
-}
-=======
   // addFaviePokemon():
 
   addFaviePoke(newPoke: Pokemon): Observable<Pokemon> {
@@ -33,7 +27,7 @@ export class PokemonService {
     return this.http.post(this.url, newPoke, {headers: headers});
   }
 
-  getFaviePoke(newPoke: string): Observable<Pokemon> {
-    return this.HTMLOutputElement.get<Pokemon>(`${this.}`)
-  }}
->>>>>>> Stashed changes
+  // getFaviePoke(newPoke: string): Observable<Pokemon> {
+  //   return this.HTMLOutputElement.get<Pokemon>(`${this.}`)
+  // }}
+}
