@@ -1,4 +1,24 @@
-<h3>Welcome pokemon trainers! Choose your pets</h3>
-<li *ngFor="let pokemon of pokemon$ | async" (click)="addFavie(pokemon)">
-    {{pokemon.id}} {{pokemon.name}}
-</li>
+<h1>Welkom Pokemon trainers! Choose your pets!</h1>
+<div class="card-deck">
+    <li *ngFor="let pokemon of pokemon$ | async" (click)="addFavie(pokemon)">
+        <div class="card">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{pokemon.name}}</h5>
+            <p class="card-text">{{pokemon.id}}</p>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">Word zijn/haar nieuwe baasje</small>
+        </div>
+        </div>
+    </li>
+</div>
+
+<!-- Te doen morgen
+- Images downloaden + Weergeven
+- Click + Addfunctie fixen
+- Favie lege ids niet weergeven
+- Remove Functie Schrijven + Knop
+- Extra info contact of iets nog afwerken
+- CSS geheel beter maken
+-->

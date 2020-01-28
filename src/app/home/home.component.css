@@ -1,0 +1,15 @@
+.card-title::first-letter {
+    font-size: 150%;
+    color: yellow;
+    text-transform: capitalize;
+  }
+  .card-image-top{
+    height: 180px;
+    width: 100%;
+    display: block;
+  }
+  .card-title{
+    height: 100%;
+    width: 300px;
+    display: block;
+  }
