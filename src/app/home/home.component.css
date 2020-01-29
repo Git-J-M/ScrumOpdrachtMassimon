@@ -3,12 +3,14 @@
     color: black;
     text-transform: capitalize;
   }
-  .card-image-top{
+  .card-img-top{
     height: 180px;
-    width: 100%;
+    width: 180px;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .card-title{
+   .card-title{
     height: 100%;
     width: 300px;
     display: block;
