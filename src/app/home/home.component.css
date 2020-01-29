@@ -1,10 +1,6 @@
 .card-title::first-letter {
     font-size: 150%;
-<<<<<<< HEAD
     color: black;
-=======
-    color: yellow;
->>>>>>> bfb7bc0f8bba4299c4bc951c80c8acdc08c93542
     text-transform: capitalize;
   }
   .card-image-top{
@@ -16,8 +12,4 @@
     height: 100%;
     width: 300px;
     display: block;
-<<<<<<< HEAD
   }
-=======
-  }
->>>>>>> bfb7bc0f8bba4299c4bc951c80c8acdc08c93542
