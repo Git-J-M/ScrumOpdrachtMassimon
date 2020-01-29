@@ -2,7 +2,7 @@
 <div class="card-deck">
     <li *ngFor="let pokemon of pokemon$ | async" (click)="addFavie(pokemon)">
         <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+        <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{pokemon.name}}</h5>
             <p class="card-text">{{pokemon.id}}</p>

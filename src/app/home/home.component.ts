@@ -12,6 +12,9 @@ export class HomeComponent implements OnInit {
   public pokemon$: Observable<Pokemon[]>;
   public pokemonDetail$: Observable<any[]>;
 
+  PokemonPhoto: string = `https://img.pokemondb.net/artwork/`;
+  image: string = `.jpg`;
+
   constructor(private pokemonService: PokemonService) { }
 
   addFavie(value) {
