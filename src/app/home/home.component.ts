@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
   public pokemon$: Observable<Pokemon[]>;
   public pokemonDetail$: Observable<any[]>;
 
-  PokemonPhoto: string = `https://img.pokemondb.net/artwork/`;
-  image: string = `.jpg`;
+  PokemonPhoto = `https://img.pokemondb.net/artwork/`;
+  image = `.jpg`;
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -37,11 +37,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.pokemon$ = this.pokemonService.getPokeApi();
-<<<<<<< HEAD
     this.pokemon$.subscribe(res => { console.log(res); });
-=======
-    this.pokemon$.subscribe(res => { console.log(res) });
->>>>>>> bfb7bc0f8bba4299c4bc951c80c8acdc08c93542
   }
 
 }
