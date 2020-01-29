@@ -1,0 +1,69 @@
+<h1>Welkom Pokemon trainers! Choose your pets!</h1>
+
+<div *ngFor="let pokemon of pokemon$ | async" (click)="addFavie(pokemon)" class="card">
+  <!-- <li *ngFor="let item of items; let i = index" [attr.data-index]="i"> omvormen voor optimaal autisme -->
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.name}}</h5>
+          <p class="card-text">{{pokemon.id}}</p>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary">Ik kies jou!</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.name}}</h5>
+          <p class="card-text">{{pokemon.id}}</p>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary">Ik kies jou!</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{pokemon.name}}</h5>
+          <p class="card-text">{{pokemon.id}}</p>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary">Ik kies jou!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="card-deck">
+    <li *ngFor="let pokemon of pokemon$ | async" (click)="addFavie(pokemon)">
+        <div class="card">
+        <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{pokemon.name}}</h5>
+            <p class="card-text">{{pokemon.id}}</p>
+        </div>
+        <div class="card-footer">
+          <button type="button" class="btn btn-primary">Ik kies jou!</button>
+            <!-- <small class="text-muted">Word zijn/haar nieuwe baasje</small> -->
+        <!-- </div>
+        </div>
+    </li>
+</div> --> -->
+
+<!-- Te doen morgen
+- Images downloaden + Weergeven
+- Click + Addfunctie fixen
+- Favie lege ids niet weergeven
+- Remove Functie Schrijven + Knop
+- Extra info contact of iets nog afwerken
+- CSS geheel beter maken
+-->
