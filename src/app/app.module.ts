@@ -15,7 +15,11 @@ const routes: Routes = [
   { path: 'favie', component: FavieComponent},
   { path: 'contact', component: ContactComponent}
   ];
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> bfb7bc0f8bba4299c4bc951c80c8acdc08c93542
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+<<<<<<< HEAD
     RouterModule.forRoot(routes)
+=======
+    RouterModule.forRoot(routes) 
+>>>>>>> bfb7bc0f8bba4299c4bc951c80c8acdc08c93542
   ],
   providers: [PokemonService],
   bootstrap: [AppComponent]

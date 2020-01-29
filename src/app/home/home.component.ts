@@ -37,7 +37,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.pokemon$ = this.pokemonService.getPokeApi();
+<<<<<<< HEAD
     this.pokemon$.subscribe(res => { console.log(res); });
+=======
+    this.pokemon$.subscribe(res => { console.log(res) });
+>>>>>>> bfb7bc0f8bba4299c4bc951c80c8acdc08c93542
   }
 
 }
