@@ -9,7 +9,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./favie.component.css']
 })
 export class FavieComponent implements OnInit {
-public pokemon$: Observable<Pokemon[]>;
+  public pokemon$: Observable<Pokemon[]>;
+  PokemonPhoto = `https://img.pokemondb.net/artwork/`;
+  image = `.jpg`;
 
   constructor(private pokemonService : PokemonService) { }
 

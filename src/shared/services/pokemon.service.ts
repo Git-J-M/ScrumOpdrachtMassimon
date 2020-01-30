@@ -7,8 +7,9 @@ import { tap, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 @Injectable()
 export class PokemonService {
-  urllocal = 'http://localhost:3000/favie';
+  urllocal = 'http://localhost:3000/faviePokemon';
   url = 'https://pokeapi.co/api/v2/pokemon/?limit=807&offset=0';
+
   constructor(private http: HttpClient) { }
 
   getPokemon(): Observable<Pokemon[]> {
