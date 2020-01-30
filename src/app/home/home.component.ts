@@ -18,16 +18,15 @@ export class HomeComponent implements OnInit {
   constructor(private pokemonService: PokemonService) { }
 
   addFavie(value) {
-    console.log(value.name);
+    // console.log(value.name);
     this.pokemonDetail$ = this.pokemonService.addFavie(value.url);
-    this.pokemonDetail$.subscribe(res => this.addFavieDetail(res)
-    );
+    this.pokemonDetail$.subscribe(result => this.addFavieDetail(result), result => console.log(result));
   }
 
   addFavieDetail(faviedetails) {
     // id === null, omdat deze auto wordt ingevuld door de json server
-    console.log('dit zijn de detail'+faviedetails);
     const newPokiesJSON = new Pokemon(null, faviedetails.name, faviedetails.type);
+    // console.log(newPokiesJSON);
     this.pokemonService.addFavieJSON(newPokiesJSON)
       .subscribe((addedPokemon: Pokemon) => {
         // pokemons opnieuw ophalen in de subscription
@@ -37,7 +36,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.pokemon$ = this.pokemonService.getPokeApi();
-    this.pokemon$.subscribe(res => { console.log(res); });
+    this.pokemon$.subscribe(result => { console.log(result); });
   }
 
 }
