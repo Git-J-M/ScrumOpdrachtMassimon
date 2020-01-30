@@ -2,7 +2,7 @@
 
 
 <div class="card-deck">
-  <li *ngFor="let pokemon of pokemon$ | async">
+  <li style="list-style-type: none;" *ngFor="let pokemon of pokemon$ | async">
     <div class="card">
       <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
       <div class="card-body">
