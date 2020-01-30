@@ -18,9 +18,10 @@ export class HomeComponent implements OnInit {
   constructor(private pokemonService: PokemonService) { }
 
   addFavie(value) {
-    console.log(value.url);
+    console.log(value.name);
     this.pokemonDetail$ = this.pokemonService.addFavie(value.url);
     this.pokemonDetail$.subscribe(res => { console.log(res); });
+    console.log(this.pokemonDetail$)
     this.addFavieDetail(this.pokemonDetail$);
   }
 
@@ -29,7 +30,7 @@ export class HomeComponent implements OnInit {
     console.log(faviedetails);
     const newPokiesJSON = new Pokemon(null, faviedetails.name, faviedetails.type);
     this.pokemonService.addFavieJSON(newPokiesJSON)
-      .subscribe((addedPokemon) => {
+      .subscribe((addedPokemon: Pokemon) => {
         // pokemons opnieuw ophalen in de subscription
         this.pokemon$ = this.pokemonService.getPokemon();
       });

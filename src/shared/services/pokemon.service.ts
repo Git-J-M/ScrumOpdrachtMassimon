@@ -7,7 +7,7 @@ import { tap, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 @Injectable()
 export class PokemonService {
-  urllocal = 'http://localhost:3000/faviePokemon';
+  urllocal = 'http://localhost:3000/faviePokemon/';
   url = 'https://pokeapi.co/api/v2/pokemon/?limit=807&offset=0';
 
   constructor(private http: HttpClient) { }
@@ -22,11 +22,12 @@ export class PokemonService {
   }
   addFavie(value): Observable<any[]> {
     const headers = new HttpHeaders().set('Content-type', 'application/json');
-    return this.http.get<any[]>(value).pipe();
+    return this.http.get<any[]>(value).pipe(tap(result => console.log('yeet', result)));
   }
-
+  //   , value.id  ///// tap(result => console.log('yeet', result))
   addFavieJSON(value): Observable<any> {
     const headers = new HttpHeaders().set('Content-type', 'application/json');
+    console.log(value);
     return this.http.post(this.urllocal, value, { headers: headers });
   }
   deleteFavieJSON(value): Observable<any> {

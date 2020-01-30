@@ -11,18 +11,22 @@ import { PokemonService } from 'src/shared/services/pokemon.service';
 })
 export class AppComponent implements OnInit {
   title = 'pokemon';
+<<<<<<< HEAD
   public pokemon$: Observable<Pokemon[]>;
 <<<<<<< Updated upstream
+=======
+  public faviePokemon$: Observable<Pokemon[]>;
+>>>>>>> master
   // currentpokemon$: Observable<Pokemon>;
 
   constructor(private pokemonService: PokemonService) {}
-  ngOnInit() {this.pokemon$ = this.pokemonService.getPokemon(); }
+  ngOnInit() {this.faviePokemon$ = this.pokemonService.getPokemon(); }
   getPokemon(id: number) {console.log('check'); }
   // addFavie(pokemonName: string, pokemonType: string) {
   //   const newPoke = new Pokemon(null, pokemonName, pokemonType);
   //   this.pokemonService.addFavie(newPoke)
-  //   .subscribe((addFavie: Pokemon) => {
-  //     this.pokemon$ = this.pokemonService.getPokemon();
+  //   .subscribe((newPoke: Pokemon) => {
+  //     this.faviePokemon$ = this.pokemonService.getPokemon();
   //   }); }
 
     deleteFaviePoke() {
@@ -61,27 +65,6 @@ ngOnInit(){};
 
 // }
 >>>>>>> Stashed changes
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
