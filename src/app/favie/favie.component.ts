@@ -13,7 +13,7 @@ export class FavieComponent implements OnInit {
   PokemonPhoto = `https://img.pokemondb.net/artwork/`;
   image = `.jpg`;
 
-  constructor(private pokemonService : PokemonService) { }
+  constructor(private pokemonService: PokemonService) { }
 
   ngOnInit() {
     this.pokemon$ = this.pokemonService.getPokemon();

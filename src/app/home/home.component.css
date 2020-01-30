@@ -1,8 +1,8 @@
 .card-title::first-letter {
-    font-size: 150%;
-    color: black;
-    text-transform: capitalize;
-  }
+  font-size: 150%;
+  color: black;
+  text-transform: capitalize;
+}
   .card-img-top{
     height: 180px;
     width: 180px;
