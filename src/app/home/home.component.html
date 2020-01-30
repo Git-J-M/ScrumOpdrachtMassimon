@@ -2,7 +2,7 @@
 
 
 <div class="card-deck">
-  <li *ngFor="let pokemon of pokemon$ | async" (click)="addFavie(pokemon)">
+  <li *ngFor="let pokemon of pokemon$ | async">
     <div class="card">
       <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
       <div class="card-body">
@@ -10,7 +10,7 @@
           <p class="card-text">{{pokemon.id}}</p>
       </div>
       <div class="card-footer">
-        <button type="button" class="btn btn-primary">Ik kies jou!</button>
+        <button type="button" class="btn btn-primary" (click)="addFavie(pokemon)">Ik kies jou!</button>
        </div>
       </div>
   </li>

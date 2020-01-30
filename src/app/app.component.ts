@@ -12,14 +12,49 @@ import { PokemonService } from 'src/shared/services/pokemon.service';
 export class AppComponent implements OnInit {
   title = 'pokemon';
   public pokemon$: Observable<Pokemon[]>;
-  currentpokemon$: Observable<Pokemon>;
-constructor(private pokemonService: PokemonService){}
-ngOnInit(){};
+  // currentpokemon$: Observable<Pokemon>;
+
+  constructor(private pokemonService: PokemonService) {}
+  ngOnInit() {this.pokemon$ = this.pokemonService.getPokemon(); }
+  getPokemon(id: number) {console.log('check'); }
+  // addFavie(pokemonName: string, pokemonType: string) {
+  //   const newPoke = new Pokemon(null, pokemonName, pokemonType);
+  //   this.pokemonService.addFavie(newPoke)
+  //   .subscribe((addFavie: Pokemon) => {
+  //     this.pokemon$ = this.pokemonService.getPokemon();
+  //   }); }
+
+    deleteFaviePoke() {
+      // TODO
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // export class AppComponent implements OnInit {
 //   countries$: Observable<Country[]>;
-//   currentcountry$: Observable<Country>   
+//   currentcountry$: Observable<Country>
 //   constructor(private countryService  : CountryService) {}
 //   ngOnInit() {this.countries$ = this.countryService.getCountries();}
 //   getCountry(id  : number) {console.log('boo');}
@@ -31,7 +66,7 @@ ngOnInit(){};
 //     .subscribe ((addedCountry  : Country) => {
 //       // countries opnieuw ophalen in de subscription
 //       this.countries$ = this.countryService.getCountries();
-//     }); } 
+//     }); }
 //     // Land verwijderen --> doorgeven aan de service
-//     deleteCountry (country  : Country) {   //TODO 
-//     } } 
+//     deleteCountry (country  : Country) {   //TODO
+//     } }

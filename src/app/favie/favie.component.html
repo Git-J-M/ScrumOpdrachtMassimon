@@ -1,11 +1,11 @@
-<h3>My favies</h3>
+<h3 style="color:white">My favies</h3>
 <div class="card-deck">
     <li *ngFor="let pokemon of pokemon$ | async">
         <div class="card">
-        <img class="card-img-top" src="..." alt="Card image cap">
+          <img class="card-img-top" [src]="PokemonPhoto + pokemon.name + image" alt="Card image cap">
         <div class="card-body">
-            <h5 class="card-title">{{pokemon.id}}</h5>
-            <p class="card-text">{{pokemon.name}}</p>
+            <!-- <h5 class="card-title">{{pokemon.id}}</h5> -->
+            <p class="card-title">{{pokemon.name}}</p>
         </div>
         <div class="card-footer">
             <small class="text-muted">Type: {{pokemon.type}}</small>
