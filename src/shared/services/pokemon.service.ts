@@ -22,7 +22,7 @@ export class PokemonService {
   }
   addFavie(value): Observable<any[]> {
     const headers = new HttpHeaders().set('Content-type', 'application/json');
-    return this.http.get<any[]>(value).pipe(tap(result => console.log('yeet', result)));
+    return this.http.get<any[]>(value).pipe(tap(result => console.log('REPAIR ME', result)));
   }
   //   , value.id  ///// tap(result => console.log('yeet', result))
   addFavieJSON(value): Observable<any> {
