@@ -20,14 +20,13 @@ export class HomeComponent implements OnInit {
   addFavie(value) {
     console.log(value.name);
     this.pokemonDetail$ = this.pokemonService.addFavie(value.url);
-    this.pokemonDetail$.subscribe(res => { console.log(res); });
-    console.log(this.pokemonDetail$)
-    this.addFavieDetail(this.pokemonDetail$);
+    this.pokemonDetail$.subscribe(res => this.addFavieDetail(res)
+    );
   }
 
   addFavieDetail(faviedetails) {
     // id === null, omdat deze auto wordt ingevuld door de json server
-    console.log(faviedetails);
+    console.log('dit zijn de detail'+faviedetails);
     const newPokiesJSON = new Pokemon(null, faviedetails.name, faviedetails.type);
     this.pokemonService.addFavieJSON(newPokiesJSON)
       .subscribe((addedPokemon: Pokemon) => {

@@ -16,22 +16,16 @@
       "type": "plant"
     },
     {
-      "id": 3
+      "id": 3,
+      "name": "blastoise"
     },
     {
-      "id": 4
+      "id": 4,
+      "name": "arbok"
     },
     {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
+      "id": 5,
+      "name": "diglett"
     }
   ]
 }
